@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using WebApi.BookOperations.CreateBook;
+using WebApi.BookOperations.GetBooks;
 using WebApi.DBOperations;
 
 namespace WebApi.Controllers{
@@ -51,10 +53,11 @@ namespace WebApi.Controllers{
         // };
 
         [HttpGet]
-        public List<Book> GetBooks()
+        public IActionResult GetBooks()
         {
-            var bookList=_context.Books.OrderBy(p=> p.ID).ToList<Book>();
-            return bookList;
+            GetBooksQuery query=new GetBooksQuery(_context);
+            var result=query.Handle();
+            return Ok(result);
         }
 
         [HttpGet ("{id}")]
@@ -72,14 +75,27 @@ namespace WebApi.Controllers{
         // }
 
         [HttpPost]
-        public IActionResult AddBook ([FromBody] Book newbook)
+        public IActionResult AddBook ([FromBody] CreateBookModel newbook)
         {
-            var book=_context.Books.SingleOrDefault(x=> x.Title== newbook.Title);
-            if(book is not null)
-                return BadRequest();
-            _context.Books.Add(newbook);
-            _context.SaveChanges();
-            return Ok();   
+            // var book=_context.Books.SingleOrDefault(x=> x.Title== newbook.Title);
+            // if(book is not null)
+            //     return BadRequest();
+            // _context.Books.Add(newbook);
+            // _context.SaveChanges();
+            // return Ok();   
+            CreateBookCommand command=new CreateBookCommand(_context);
+            try
+            {
+                command.Model=newbook;
+                command.Handle();
+ 
+            }
+            catch (Exception ex)
+            {                
+               return BadRequest(ex.Message);
+            }
+
+            return Ok();
         }
 
         [HttpPut("{id}")]
