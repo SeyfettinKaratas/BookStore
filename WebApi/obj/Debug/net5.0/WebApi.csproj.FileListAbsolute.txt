@@ -32,3 +32,5 @@ C:\Users\skara\desktop\pratikler\BookStore\WebApi\bin\Debug\net5.0\Microsoft.Ent
 C:\Users\skara\desktop\pratikler\BookStore\WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\skara\desktop\pratikler\BookStore\WebApi\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\skara\desktop\pratikler\BookStore\WebApi\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\skara\desktop\pratikler\BookStore\WebApi\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\skara\desktop\pratikler\BookStore\WebApi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
