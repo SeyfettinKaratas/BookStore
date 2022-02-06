@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "FediNFO8vQFqtHesKCJW+tyKgRLQwLbWAtID9O7TIGhHLbraU2gSyy6nEKYhOjNoWzExpoNLfWdnvXrEEg8olQ==",
+  "dgSpecHash": "Fevd827om5AzDQWAN6xqf1i/a26uyyLnGZVbBxtS8B/1v76JH2I4/z/NGuf4CfJMl0K8U2E/JQkGHt1M4IwWdw==",
   "success": true,
   "projectFilePath": "C:\\Users\\skara\\desktop\\pratikler\\BookStore\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\skara\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\skara\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "C:\\Users\\skara\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\skara\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\skara\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.6\\microsoft.entityframeworkcore.5.0.6.nupkg.sha512",
     "C:\\Users\\skara\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.6\\microsoft.entityframeworkcore.abstractions.5.0.6.nupkg.sha512",
