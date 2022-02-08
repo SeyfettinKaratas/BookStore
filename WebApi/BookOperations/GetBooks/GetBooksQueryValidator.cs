@@ -6,7 +6,7 @@ namespace WebApi.BookOperations.GetBooks
     {
         public GetBooksQueryValidator()
         {
-           
+            
         }
     }
 }

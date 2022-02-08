@@ -73,22 +73,28 @@ namespace WebApi.Controllers{
         {
             // var book=_context.Books.Where(p=> p.ID==id).SingleOrDefault<Book>();
             // return book;
-            BookDetailViewModel result;
-            try
-            {
-               GetBookDetailQuery query=new GetBookDetailQuery(_context,_mapper);
-                query.BookId=id;
-                GetBookDetailQueryValidator validator=new GetBookDetailQueryValidator();
-                validator.ValidateAndThrow(query);
-                result= query.Handle(); 
-            }
-            catch (Exception ex)
-            {
+           
+            // try
+            // {
+            //    GetBookDetailQuery query=new GetBookDetailQuery(_context,_mapper);
+            //     query.BookId=id;
+            //     GetBookDetailQueryValidator validator=new GetBookDetailQueryValidator();
+            //     validator.ValidateAndThrow(query);
+            //     result= query.Handle(); 
+            // }
+            // catch (Exception ex)
+            // {
                 
-                return BadRequest(ex.Message);
-            }
-
+            //     return BadRequest(ex.Message);
+            // }
+            BookDetailViewModel result;
+            GetBookDetailQuery query=new GetBookDetailQuery(_context,_mapper);
+            query.BookId=id;
+            GetBookDetailQueryValidator validator=new GetBookDetailQueryValidator();
+            validator.ValidateAndThrow(query);
+            result= query.Handle(); 
             return Ok(result);
+
         }
 
         // [HttpGet ] ---> bu yöntem bir üstteki getbooks metodu ile aynı işlevi görür.
@@ -107,35 +113,41 @@ namespace WebApi.Controllers{
             // _context.Books.Add(newbook);
             // _context.SaveChanges();
             // return Ok();   
-            CreateBookCommand command=new CreateBookCommand(_context,_mapper);
-            try
-            {
-                command.Model=newbook;
-                CreateBookCommandValidator validator=new CreateBookCommandValidator();
+            
 
-                validator.ValidateAndThrow(command);
-                command.Handle();
+            //----Try-catch bloğu middleware metodu kullanılarak kapatıldı.
+            // try
+            // {
+            //     command.Model=newbook;
+            //     CreateBookCommandValidator validator=new CreateBookCommandValidator();
 
-               // ValidationResult result=validator.Validate(command);
-                // if (!result.IsValid)
-                // {
-                //     foreach (var item in result.Errors)
-                //     {
-                //         Console.WriteLine("Özellik "+item.PropertyName+"Error Message: "+item.ErrorMessage);
-                //     }                    
-                // }
-                // else
-                //     {
-                //          command.Handle();
-                //     }
+            //     validator.ValidateAndThrow(command);
+            //     command.Handle();
+
+            //    // ValidationResult result=validator.Validate(command);
+            //     // if (!result.IsValid)
+            //     // {
+            //     //     foreach (var item in result.Errors)
+            //     //     {
+            //     //         Console.WriteLine("Özellik "+item.PropertyName+"Error Message: "+item.ErrorMessage);
+            //     //     }                    
+            //     // }
+            //     // else
+            //     //     {
+            //     //          command.Handle();
+            //     //     }
                
  
-            }
-            catch (Exception ex)
-            {                
-               return BadRequest(ex.Message);
-            }
-
+            // }
+            // catch (Exception ex)
+            // {                
+            //    return BadRequest(ex.Message);
+            // }
+            CreateBookCommand command=new CreateBookCommand(_context,_mapper);
+            command.Model=newbook;
+            CreateBookCommandValidator validator=new CreateBookCommandValidator();
+            validator.ValidateAndThrow(command);
+            command.Handle();
             return Ok();
         }
 
@@ -153,20 +165,25 @@ namespace WebApi.Controllers{
             // _context.SaveChanges();
 
            
-            try
-            {
-                 UpdateBookCommand command=new UpdateBookCommand(_context);
-                 command.BookId=id;
-                 command.Model=updatedBook;
-                 UpdateBookCommandValidator validator=new UpdateBookCommandValidator();
-                 validator.ValidateAndThrow(command);
-                 command.Handle();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-
+            // try
+            // {
+            //      UpdateBookCommand command=new UpdateBookCommand(_context);
+            //      command.BookId=id;
+            //      command.Model=updatedBook;
+            //      UpdateBookCommandValidator validator=new UpdateBookCommandValidator();
+            //      validator.ValidateAndThrow(command);
+            //      command.Handle();
+            // }
+            // catch (Exception ex)
+            // {
+            //     return BadRequest(ex.Message);
+            // }
+            UpdateBookCommand command=new UpdateBookCommand(_context);
+            command.BookId=id;
+            command.Model=updatedBook;
+            UpdateBookCommandValidator validator=new UpdateBookCommandValidator();
+            validator.ValidateAndThrow(command);
+            command.Handle();
             return Ok();
         }
 
@@ -178,19 +195,24 @@ namespace WebApi.Controllers{
             //     return BadRequest();
             // _context.Books.Remove(book);
             // _context.SaveChanges();
-            try
-            {
-                DeleteBookCommand command=new DeleteBookCommand(_context);
-                command.BookId=id;
-                DeleteBookCommandValidator validator=new DeleteBookCommandValidator();
-                validator.ValidateAndThrow(command);
-                command.Handle();
+            // try
+            // {
+            //     DeleteBookCommand command=new DeleteBookCommand(_context);
+            //     command.BookId=id;
+            //     DeleteBookCommandValidator validator=new DeleteBookCommandValidator();
+            //     validator.ValidateAndThrow(command);
+            //     command.Handle();
 
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            // }
+            // catch (Exception ex)
+            // {
+            //     return BadRequest(ex.Message);
+            // }
+            DeleteBookCommand command=new DeleteBookCommand(_context);
+            command.BookId=id;
+            DeleteBookCommandValidator validator=new DeleteBookCommandValidator();
+            validator.ValidateAndThrow(command);
+            command.Handle();
             return Ok();    
         }
     }
