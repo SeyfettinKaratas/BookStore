@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\skara\\desktop\\pratikler\\BookStore\\WebApi\\WebApi.csproj": {}
+    "c:\\Users\\skara\\desktop\\pratikler\\BookStore\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\skara\\desktop\\pratikler\\BookStore\\WebApi\\WebApi.csproj": {
+    "c:\\Users\\skara\\desktop\\pratikler\\BookStore\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\skara\\desktop\\pratikler\\BookStore\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "c:\\Users\\skara\\desktop\\pratikler\\BookStore\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\skara\\desktop\\pratikler\\BookStore\\WebApi\\WebApi.csproj",
+        "projectPath": "c:\\Users\\skara\\desktop\\pratikler\\BookStore\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\skara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\skara\\desktop\\pratikler\\BookStore\\WebApi\\obj\\",
+        "outputPath": "c:\\Users\\skara\\desktop\\pratikler\\BookStore\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -91,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }

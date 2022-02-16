@@ -62,7 +62,23 @@ namespace WebApi.DBOperations
                    } 
                );
 
+               context.Authors.AddRange(
+                   new Author{
+                       Name="Ali",
+                       Surname="Kara",                                              
+                   },
+                    new Author{
+                       Name="Mehmet",
+                       Surname="Nur",                                              
+                   },
+                    new Author{
+                       Name="Ahmet",
+                       Surname="Çizmeli",                                              
+                   }
+               );
+
                context.SaveChanges();
+
            }
         }
     }

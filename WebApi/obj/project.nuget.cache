@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kVZoUyuPx7nAFIV8zsvBO65PUXbkXzKHxLcXxzpNwQ033iTMmeY5UtlxISpZ6v/kKTGg27slAX+zGXtxcVUhpA==",
+  "dgSpecHash": "JOiBBm68YKU7NoRStUcJxTtF7/RoYGOCmQ4kJYsR4t1aeO3V3Vz3cgAqCGfk6sNUGsuyV2rUpedrOMzCvQ6FNA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\skara\\desktop\\pratikler\\BookStore\\WebApi\\WebApi.csproj",
+  "projectFilePath": "c:\\Users\\skara\\desktop\\pratikler\\BookStore\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\skara\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\skara\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
