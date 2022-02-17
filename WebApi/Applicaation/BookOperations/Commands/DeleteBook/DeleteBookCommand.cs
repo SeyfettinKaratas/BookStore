@@ -4,9 +4,9 @@ using WebApi.DBOperations;
 
 namespace WebApi.Application.BookOperations.Commands.DeleteBook{
     public class DeleteBookCommand{
-        private readonly BookStoreDBcontext _dbContext;
+        private readonly IBookStoreDBContext _dbContext;
         public int BookId { get; set; }
-        public DeleteBookCommand(BookStoreDBcontext dbContext)
+        public DeleteBookCommand(IBookStoreDBContext dbContext)
         {
             _dbContext=dbContext;
         }

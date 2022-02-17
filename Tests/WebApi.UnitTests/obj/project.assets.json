@@ -7263,6 +7263,8 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "FluentAssertions >= 6.5.1",
+      "Microsoft.EntityFrameworkCore >= 5.0.6",
+      "Microsoft.EntityFrameworkCore.InMemory >= 5.0.6",
       "Microsoft.NET.Test.Sdk >= 16.9.4",
       "Moq >= 4.16.1",
       "WebApi >= 1.0.0",
@@ -7322,6 +7324,14 @@
           "FluentAssertions": {
             "target": "Package",
             "version": "[6.5.1, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[5.0.6, )"
+          },
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "[5.0.6, )"
           },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",

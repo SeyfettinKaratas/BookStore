@@ -4,10 +4,10 @@ using WebApi.DBOperations;
 
 namespace WebApi.Application.BookOperations.Commands.UpdateBook{
     public class UpdateBookCommand{
-        private readonly BookStoreDBcontext _dbContext;
+        private readonly IBookStoreDBContext _dbContext;
         public int BookId { get; set; }
         public UpdateBookViewModel Model { get; set; }
-        public UpdateBookCommand(BookStoreDBcontext dbContext)
+        public UpdateBookCommand(IBookStoreDBContext dbContext)
         {
             _dbContext=dbContext;
         }
